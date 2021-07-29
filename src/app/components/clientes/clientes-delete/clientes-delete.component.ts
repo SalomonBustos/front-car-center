@@ -18,7 +18,6 @@ export class ClientesDeleteComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
     public service: ClienteService
   ) {
-    debugger;
     this.cliente = data.cliente;
   }
 
@@ -27,7 +26,6 @@ export class ClientesDeleteComponent {
   }
 
   confirmDelete(): void {
-    debugger;
     this.service.delete(this.cliente.id).subscribe((result: any) => {
       this.dialogRef.close({ isError: false, message: "CLIENTE ELIMINADO EXITOSAMENTE!" });
     }, err => {
