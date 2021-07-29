@@ -1,0 +1,19 @@
+<div class="container">
+  <h3 mat-dialog-title>Está seguro?</h3>
+  <div mat-dialog-content>
+    <ul class="clearfix">
+      <li>
+        <p><span class="font-weight-bold"> Primer nombre: </span>{{ cliente.primerNombre }}</p>
+      </li>
+      <li>
+        <p><span class="font-weight-bold"> Primer apellido: </span>{{ cliente.primerApellido }}</p>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions class="mb-1">
+    <button mat-flat-button color="warn" (click)="confirmDelete()">
+      Eliminar
+    </button>
+    <button mat-flat-button (click)="onNoClick()" tabindex="-1">Cancelar</button>
+  </div>
+</div>

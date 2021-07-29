@@ -1,0 +1,97 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <div class="modal-about">
+          <div class="font-weight-bold p-t-5 font-17">
+            {{dialogTitle}}</div>
+        </div>
+      </div>
+    </div>
+    <button (click)="dialogRef.close()" aria-label="Close dialog">
+      <em class="material-icons">close</em>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="form">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Primer nombre *</label>
+            <input matInput formControlName="primerNombre">
+            <mat-error *ngIf="form.get('primerNombre').hasError('required')">
+              El campo primerNombre es requerido.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Segundo nombre</label>
+            <input matInput formControlName="segundoNombre">
+          </mat-form-field>
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Primer apellido *</label>
+            <input matInput formControlName="primerApellido">
+            <mat-error *ngIf="form.get('primerApellido').hasError('required')">
+              El campo primerApellido es requerido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Segundo apellido</label>
+            <input matInput formControlName="segundoApellido">
+          </mat-form-field>
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Tipo de documento *</label>
+            <input matInput formControlName="tipoDocumento">
+            <mat-error *ngIf="form.get('tipoDocumento').hasError('required')">
+              El campo tipoDocumento es requerido.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Documento *</label>
+            <input matInput formControlName="documento">
+            <mat-error *ngIf="form.get('documento').hasError('required')">
+              El campo documento es requerido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Celular *</label>
+            <input matInput formControlName="celular">
+            <mat-error *ngIf="form.get('celular').hasError('required')">
+              El campo celular es requerido.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Dirección *</label>
+            <input matInput formControlName="direccion">
+            <mat-error *ngIf="form.get('direccion').hasError('required')">
+              El campo direccion es requerido.
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="ats-full-width" appearance="outline">
+            <label>Correo electrónico *</label>
+            <input matInput formControlName="correoElectronico">
+            <mat-error *ngIf="form.get('correoElectronico').hasError('required')">
+              El campo CorreoElectronico es requerido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" (click)="save()">Gurdar</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1"
+              matTooltip="Limpiar campos">Canelar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
